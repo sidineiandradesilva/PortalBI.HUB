@@ -1,0 +1,92 @@
+﻿@model  Base.Entity.Recebimentohub
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Excluir</h2>
+<h3>Você tem certeza que gostaria de excluir este registro?</h3>
+<div>
+    =
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DataRecebimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataRecebimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoraRecebimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoraRecebimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hora_Inicial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hora_Inicial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hora_Final)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hora_Final)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Volume)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Volume)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoEmbalagem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoEmbalagem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Placa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Placa)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-button">
+            <input type="submit" value="Delete" class="btn btn-default" />
+
+            @Html.ActionLink("Cancelar", "Index", new { @class = "btn btn-default" })
+
+        </div>
+    }
+</div>
+

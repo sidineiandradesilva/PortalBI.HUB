@@ -1,0 +1,9 @@
+C:\Users\sidin\source\repos\PortalBI.HUB\DAL\bin\Debug\DAL.dll
+C:\Users\sidin\source\repos\PortalBI.HUB\DAL\bin\Debug\DAL.pdb
+C:\Users\sidin\source\repos\PortalBI.HUB\DAL\bin\Debug\Base.dll
+C:\Users\sidin\source\repos\PortalBI.HUB\DAL\bin\Debug\Base.pdb
+C:\Users\sidin\source\repos\PortalBI.HUB\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\sidin\source\repos\PortalBI.HUB\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\sidin\source\repos\PortalBI.HUB\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\sidin\source\repos\PortalBI.HUB\DAL\obj\Debug\DAL.dll
+C:\Users\sidin\source\repos\PortalBI.HUB\DAL\obj\Debug\DAL.pdb

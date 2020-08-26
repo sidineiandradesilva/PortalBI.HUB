@@ -1,0 +1,127 @@
+﻿@model IEnumerable<Base.Entity.Recebimentohub>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Listagem de Recebimento</h2>
+<br />
+<div class="table-responsive">
+    <table class="table table-hover" id="=tblRecebimentohub">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataRecebimento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HoraRecebimento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cliente)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Hora_Inicial)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Hora_Final)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Volume)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TipoEmbalagem)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Placa)
+                </th>
+                <th>
+                    Gerenciar
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataRecebimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoraRecebimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cliente)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Hora_Inicial)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Hora_Final)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Volume)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TipoEmbalagem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Placa)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-warning" })
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@section Scripts {
+    <script type="text/javascript">
+            $(document).ready(function () {
+                $(".btn-link").click(function () {
+                    var id = $(this).attr('data-item');
+                    if (confirm("Você tem certeza que gostaria de excluir este registro?")) {
+                        $.ajax({
+                            method: "POST",
+                            url: "/Recebimentohub/Delete/" + id,
+                            success: function (data) {
+                                $("#Recebimentohub tbody > tr").remove();
+                                $.each(data, function (i, pessoa) {
+                                    $("#tblRecebimentohub tbody").append(
+                                        "<tr>" +
+                                        "   <td>" + Recebimentohub.DataRecebimento + "</td>" +
+                                        "   <td>" + Recebimentohub.Cliente + "</td>" +
+                                        "   <td>" + Recebimentohub.Placa + "</td>" +
+                                        "   <td>" +
+                                        "       <a href='/Recebimentohub/Edit/" + Recebimentohub.Id + "'>Editar</a> |" +
+                                        "       <button type="button" class="btn btn-link" data-item="" + Recebimentohub.Id + "">Deletar</button>" +
+                                        "   </td>" +
+                                        "</tr>"
+                                    );
+                                });
+                            },
+                            error: function (data) {
+                                alert("Houve um erro na pesquisa.");
+                            }
+                        });
+                    }
+                });
+            });
+    </script>
+
+}
+
+

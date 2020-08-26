@@ -1,0 +1,5 @@
+C:\Users\sidin\source\repos\PortalBI.HUB\Base\bin\Debug\Base.dll
+C:\Users\sidin\source\repos\PortalBI.HUB\Base\bin\Debug\Base.pdb
+C:\Users\sidin\source\repos\PortalBI.HUB\Base\obj\Debug\Base.csproj.CoreCompileInputs.cache
+C:\Users\sidin\source\repos\PortalBI.HUB\Base\obj\Debug\Base.dll
+C:\Users\sidin\source\repos\PortalBI.HUB\Base\obj\Debug\Base.pdb
